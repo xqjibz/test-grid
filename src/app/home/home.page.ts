@@ -20,6 +20,7 @@ export class HomePage {
 
     ionViewDidLoad() {
 
+        console.log("called ionviewdidload, setting filtered items")
         this.setFilteredItems();
 
         this.searchControl.valueChanges.subscribe(search => {
