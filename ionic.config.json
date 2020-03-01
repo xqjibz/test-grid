@@ -1,0 +1,7 @@
+{
+  "name": "test-grid",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
