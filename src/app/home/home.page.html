@@ -12,7 +12,36 @@
     (ionChange)="setFilteredItems()"
   ></ion-searchbar>
 
+  <ion-row>
+    <ion-col>Index</ion-col>
+    <ion-col>Title</ion-col>
+    <ion-col>Value
+      <ion-button color="primary" (click)="sortValues()">
+        <ion-icon [name]="sortDirection"></ion-icon>
+      </ion-button>
+      
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+  
+  <ion-row *ngFor="let item of items index as i">
+    <ion-col>{{ i }}</ion-col>
+    <ion-col>{{ item.title }}</ion-col>
+    <ion-col>
+      
+      {{ item.value }} 
+
+
+    </ion-col>
+    <ion-col>
+      <ion-icon name="trash-outline"></ion-icon>
+    </ion-col>
+  </ion-row>
+
   <ion-list>
+    <ion-list-header>
+      <ion-label>List Header</ion-label>
+    </ion-list-header>
     <ion-item *ngFor="let item of items">
       {{ item.title }}
     </ion-item>
